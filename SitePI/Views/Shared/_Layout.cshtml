@@ -5,6 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - SitePI</title>
 
+    <link rel="shortcut icon" src="@Url.Content("~/assets/images/marcha-128x128.png")" type="image/x-icon">
+
+    <link href="@Url.Content("~/assets/web/assets/mobirise-icons/mobirise-icons.css")" rel="stylesheet" type="text/css" />
+    <link href="@Url.Content("~/assets/tether/tether.min.css")" rel="stylesheet" type="text/css" />
+    <link href="@Url.Content("~/assets/soundcloud-plugin/style.css")" rel="stylesheet" type="text/css" />
+    <link href="@Url.Content("~/assets/bootstrap/css/bootstrap.min.css")" rel="stylesheet" type="text/css" />
+    <link href="@Url.Content("~/assets/bootstrap/css/bootstrap-grid.min.css")" rel="stylesheet" type="text/css" />
+    <link href="@Url.Content("~/assets/bootstrap/css/bootstrap-reboot.min.css")" rel="stylesheet" type="text/css" />
+    <link href="@Url.Content("~/assets/dropdown/css/style.css")" rel="stylesheet" type="text/css" />
+    <link href="@Url.Content("~/assets/socicon/css/styles.css")" rel="stylesheet" type="text/css" />
+    <link href="@Url.Content("~/assets/animatecss/animate.min.css")" rel="stylesheet" type="text/css" />
+    <link href="@Url.Content("~/assets/theme/css/style.css")" rel="stylesheet" type="text/css" />
+    <link href="@Url.Content("~/assets/mobirise/css/mbr-additional.css")" rel="stylesheet" type="text/css" />
+
     <environment include="Development">
         <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
         <link rel="stylesheet" href="~/css/site.css" />
@@ -15,36 +29,150 @@
               asp-fallback-test-class="sr-only" asp-fallback-test-property="position" asp-fallback-test-value="absolute" />
         <link rel="stylesheet" href="~/css/site.min.css" asp-append-version="true" />
     </environment>
+
 </head>
 <body>
-    <nav class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a asp-area="" asp-controller="Home" asp-action="Index" class="navbar-brand">SitePI</a>
+    <section class="menu cid-qZMbMzaunH" once="menu" id="menu1-g">
+
+        <nav class="navbar navbar-expand beta-menu navbar-dropdown align-items-center navbar-fixed-top navbar-toggleable-sm">
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </button>
+            <div class="menu-logo">
+                <div class="navbar-brand">
+                    <span class="navbar-logo">
+                        <a onclick="location.href='@Url.Action("Index", "Home")'">
+                            <img src="@Url.Content("~/assets/images/marcha-128x128.png")" alt="Mobirise" title="" style="height: 4.6rem;">
+                        </a>
+                    </span>
+                    <span class="navbar-caption-wrap"><a class="navbar-caption text-white display-4" onclick="location.href='@Url.Action("Index", "Home")'">Site Do Mentiroso</a></span>
+                </div>
             </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li><a asp-area="" asp-controller="Home" asp-action="Index">Home</a></li>
-                    <li><a asp-area="" asp-controller="Home" asp-action="About">About</a></li>
-                    <li><a asp-area="" asp-controller="Home" asp-action="Contact">Contact</a></li>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav nav-dropdown nav-right" data-app-modern-menu="true">
+                    <li class="nav-item">
+                        <a class="nav-link link text-white display-4" href="#">
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link link text-white display-4" onclick="location.href='@Url.Action("About", "Home")'">
+                            <span class="mbri-user mbr-iconfont mbr-iconfont-btn"></span>
+                            Sobre
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link link text-white display-4" onclick="location.href='@Url.Action("Services", "Home")'">
+                            <span class="mbri-cart-add mbr-iconfont mbr-iconfont-btn"></span>
+                            Carros&nbsp;
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link link text-white display-4" onclick="location.href='@Url.Action("Contact", "Home")'">
+                            <span class="mbri-sites mbr-iconfont mbr-iconfont-btn"></span>
+                            Contato&nbsp;
+                        </a>
+                    </li>
+                    <li class="nav-item"><a class="nav-link link text-white display-4" href="#">&nbsp;&nbsp;</a></li>
+                    @await Html.PartialAsync("_LoginPartial")
                 </ul>
-                @await Html.PartialAsync("_LoginPartial")
+
+            </div>
+        </nav>
+        <div class="container body-content">
+            @RenderBody()
+            <hr />
+            <footer>
+                <p>&copy; 2018 - SitePI</p>
+            </footer>
+        </div>
+    </section>
+
+    <section class="cid-qZLMQJR7Kq" id="footer2-b">
+
+
+        <div class="container">
+            <div class="media-container-row content mbr-white">
+                <div class="col-12 col-md-3 mbr-fonts-style display-7">
+                    <p class="mbr-text">
+                        <strong style="color: red;">
+                            REVIEWS RECENTES
+                            <br>
+                        </strong>__dctg__ : Serviço muito bom, pena que Ricardo está na equipe.
+                        <br><strong style="color: red;">10 minutos atrás</strong>
+                        <br></strong>viniciuserva: Concordando com Tavares, serviço de ponta, deveriam abrir em guarajúba uma filial.
+                        <br><strong style="color: red;">15 minutos atrás<br></strong>
+                        <br><strong style="color: red;">Contatos:</strong><br>Email: viniciusdarkseeropendota55@gmail.com                    <br>Telefone: (71)9 999-9738 <br>
+                    </p>
+                </div>
+                <div class="col-12 col-md-3 mbr-fonts-style display-7">
+                    <p class="mbr-text">
+                        <strong style="color: red;">
+                            NOSSA COMPANHIA
+                            <br>
+                        </strong>Nossa companhia provem o melhor serviço de vendas de carros em todo território nacional, com maior deslocamento de veículos na área de guarajuba e regiões.
+                        <br>Termos e condições estão aqui para qualquer venda feita.<br>
+                        <br><strong style="color: red;">
+                            Chame nosso reboque GRATUITAMENTE:
+                        </strong><br>(71)9 9262-6028<br>
+                    </p>
+                </div>
+                <div class="col-12 col-md-6">
+                    <div class="google-map"><iframe frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyA0Dx_boXQiwvdz8sJHoYeZNVTdoWONYkU&amp;q=place_id:ChIJ_T0nnHpRFgcRXMJ3KgZ8a0c" allowfullscreen=""></iframe></div>
+                </div>
+            </div>
+            <div class="footer-lower">
+                <div class="media-container-row">
+                    <div class="col-sm-12">
+                        <hr>
+                    </div>
+                </div>
+                <div class="media-container-row mbr-white">
+                    <div class="col-sm-6 copyright">
+                        <p class="mbr-text mbr-fonts-style display-7">
+                            © Copyright 2018 EquipeDoMentiroso- All Rights Reserved
+                        </p>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="social-list align-right">
+                            <div class="soc-item">
+                                <a href="https://twitter.com/mobirise" target="_blank">
+                                    <span class="mbr-iconfont mbr-iconfont-social socicon-instagram socicon"></span>
+                                </a>
+                            </div>
+                            <div class="soc-item">
+                                <a href="https://www.facebook.com/pages/Mobirise/1616226671953247" target="_blank">
+                                    <span class="socicon-facebook socicon mbr-iconfont mbr-iconfont-social"></span>
+                                </a>
+                            </div>
+                            <div class="soc-item">
+                                <a href="https://www.youtube.com/c/mobirise" target="_blank">
+                                    <span class="socicon-youtube socicon mbr-iconfont mbr-iconfont-social"></span>
+                                </a>
+                            </div>
+
+
+
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-    </nav>
-    <div class="container body-content">
-        @RenderBody()
-        <hr />
-        <footer>
-            <p>&copy; 2018 - SitePI</p>
-        </footer>
-    </div>
+    </section>
+
+    <script src="@Url.Content("~/assets/web/assets/jquery/jquery.min.js")"></script>
+    <script src="@Url.Content("~/assets/popper/popper.min.js")"></script>
+    <script src="@Url.Content("~/assets/tether/tether.min.js")"></script>
+    <script src="@Url.Content("~/assets/bootstrap/js/bootstrap.min.js")"></script>
+    <script src="@Url.Content("~/assets/smoothscroll/smooth-scroll.js")"></script>
+    <script src="@Url.Content("~/assets/dropdown/js/script.min.js")"></script>
+    <script src="@Url.Content("~/assets/touchswipe/jquery.touch-swipe.min.js")"></script>
+    <script src="@Url.Content("~/assets/viewportchecker/jquery.viewportchecker.js")"></script>
+    <script src="@Url.Content("~/assets/theme/js/script.js")"></script>
 
     <environment include="Development">
         <script src="~/lib/jquery/dist/jquery.js"></script>

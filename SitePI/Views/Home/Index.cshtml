@@ -2,105 +2,223 @@
     ViewData["Title"] = "Home Page";
 }
 
-<div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="6000">
-    <ol class="carousel-indicators">
-        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-        <li data-target="#myCarousel" data-slide-to="1"></li>
-        <li data-target="#myCarousel" data-slide-to="2"></li>
-        <li data-target="#myCarousel" data-slide-to="3"></li>
-    </ol>
-    <div class="carousel-inner" role="listbox">
-        <div class="item active">
-            <img src="~/images/banner1.svg" alt="ASP.NET" class="img-responsive" />
-            <div class="carousel-caption" role="option">
-                <p>
-                    Learn how to build ASP.NET apps that can run anywhere.
-                    <a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkID=525028&clcid=0x409">
-                        Learn More
-                    </a>
-                </p>
-            </div>
-        </div>
-        <div class="item">
-            <img src="~/images/banner2.svg" alt="Visual Studio" class="img-responsive" />
-            <div class="carousel-caption" role="option">
-                <p>
-                    There are powerful new features in Visual Studio for building modern web apps.
-                    <a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkID=525030&clcid=0x409">
-                        Learn More
-                    </a>
-                </p>
-            </div>
-        </div>
-        <div class="item">
-            <img src="~/images/banner3.svg" alt="Package Management" class="img-responsive" />
-            <div class="carousel-caption" role="option">
-                <p>
-                    Bring in libraries from NuGet and npm, and automate tasks using Grunt or Gulp.
-                    <a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkID=525029&clcid=0x409">
-                        Learn More
-                    </a>
-                </p>
-            </div>
-        </div>
-        <div class="item">
-            <img src="~/images/banner4.svg" alt="Microsoft Azure" class="img-responsive" />
-            <div class="carousel-caption" role="option">
-                <p>
-                    Learn how Microsoft's Azure cloud platform allows you to build, deploy, and scale web apps.
-                    <a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkID=525027&clcid=0x409">
-                        Learn More
-                    </a>
-                </p>
-            </div>
-        </div>
-    </div>
-    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
-        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-        <span class="sr-only">Previous</span>
-    </a>
-    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
-        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-        <span class="sr-only">Next</span>
-    </a>
-</div>
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="shortcut icon" src="@Url.Content("~/assets/images/marcha-128x128.png")" type="image/x-icon">
 
-<div class="row">
-    <div class="col-md-3">
-        <h2>Application uses</h2>
-        <ul>
-            <li>Sample pages using ASP.NET Core MVC</li>
-            <li>Theming using <a href="https://go.microsoft.com/fwlink/?LinkID=398939">Bootstrap</a></li>
-        </ul>
-    </div>
-    <div class="col-md-3">
-        <h2>How to</h2>
-        <ul>
-            <li><a href="https://go.microsoft.com/fwlink/?LinkID=398600">Add a Controller and View</a></li>
-            <li><a href="https://go.microsoft.com/fwlink/?LinkId=699315">Manage User Secrets using Secret Manager.</a></li>
-            <li><a href="https://go.microsoft.com/fwlink/?LinkId=699316">Use logging to log a message.</a></li>
-            <li><a href="https://go.microsoft.com/fwlink/?LinkId=699317">Add packages using NuGet.</a></li>
-            <li><a href="https://go.microsoft.com/fwlink/?LinkId=699319">Target development, staging or production environment.</a></li>
-        </ul>
-    </div>
-    <div class="col-md-3">
-        <h2>Overview</h2>
-        <ul>
-            <li><a href="https://go.microsoft.com/fwlink/?LinkId=518008">Conceptual overview of what is ASP.NET Core</a></li>
-            <li><a href="https://go.microsoft.com/fwlink/?LinkId=699320">Fundamentals of ASP.NET Core such as Startup and middleware.</a></li>
-            <li><a href="https://go.microsoft.com/fwlink/?LinkId=398602">Working with Data</a></li>
-            <li><a href="https://go.microsoft.com/fwlink/?LinkId=398603">Security</a></li>
-            <li><a href="https://go.microsoft.com/fwlink/?LinkID=699321">Client side development</a></li>
-            <li><a href="https://go.microsoft.com/fwlink/?LinkID=699322">Develop on different platforms</a></li>
-            <li><a href="https://go.microsoft.com/fwlink/?LinkID=699323">Read more on the documentation site</a></li>
-        </ul>
-    </div>
-    <div class="col-md-3">
-        <h2>Run &amp; Deploy</h2>
-        <ul>
-            <li><a href="https://go.microsoft.com/fwlink/?LinkID=517851">Run your app</a></li>
-            <li><a href="https://go.microsoft.com/fwlink/?LinkID=517853">Run tools such as EF migrations and more</a></li>
-            <li><a href="https://go.microsoft.com/fwlink/?LinkID=398609">Publish to Microsoft Azure Web Apps</a></li>
-        </ul>
-    </div>
-</div>
+    <link href="@Url.Content("~/assets/web/assets/mobirise-icons/mobirise-icons.css")" rel="stylesheet" type="text/css" />
+    <link href="@Url.Content("~/assets/tether/tether.min.css")" rel="stylesheet" type="text/css" />
+    <link href="@Url.Content("~/assets/soundcloud-plugin/style.css")" rel="stylesheet" type="text/css" />
+    <link href="@Url.Content("~/assets/bootstrap/css/bootstrap.min.css")" rel="stylesheet" type="text/css" />
+    <link href="@Url.Content("~/assets/bootstrap/css/bootstrap-grid.min.css")" rel="stylesheet" type="text/css" />
+    <link href="@Url.Content("~/assets/bootstrap/css/bootstrap-reboot.min.css")" rel="stylesheet" type="text/css" />
+    <link href="@Url.Content("~/assets/dropdown/css/style.css")" rel="stylesheet" type="text/css" />
+    <link href="@Url.Content("~/assets/socicon/css/styles.css")" rel="stylesheet" type="text/css" />
+    <link href="@Url.Content("~/assets/animatecss/animate.min.css")" rel="stylesheet" type="text/css" />
+    <link href="@Url.Content("~/assets/theme/css/style.css")" rel="stylesheet" type="text/css" />
+    <link href="@Url.Content("~/assets/mobirise/css/mbr-additional.css")" rel="stylesheet" type="text/css" />
+
+
+
+</head>
+<body>
+
+    <section class="mbr-section content8 cid-qZLHlljiu0" id="content8-4">
+
+        <div class="container">
+            <div class="media-container-row title">
+                <div class="col-12 col-md-8">
+                    <div class="mbr-section-btn align-center"><a class="btn btn-primary display-4">LEARN MORE</a></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="header1 cid-qZLGTpZNBQ" id="header1-3">
+
+        <div class="mbr-overlay" style="opacity: 0.4; background-color: rgb(0, 0, 0);">
+        </div>
+        <div class="container">
+            <div class="row justify-content-md-center">
+                <div class="mbr-white col-md-10">
+
+                    <h3 class="mbr-section-subtitle align-center mbr-light pb-3 mbr-fonts-style display-2">VEÍCULOS DE TODAS AS MARCAS!</h3>
+                    <p class="mbr-text align-center pb-3 mbr-fonts-style display-5"></p>
+                    <div class="mbr-section-btn align-center"><a class="btn btn-md btn-success display-4" href="index.html#content8-7">Ver Mais</a></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="mbr-section content8 cid-qZLJgmu9Lk" id="content8-5">
+
+        <div class="container">
+            <div class="media-container-row title">
+                <div class="col-12 col-md-8">
+                    <div class="mbr-section-btn align-center"><a class="btn btn-white-outline display-4" href="https://www.dicionarioinformal.com.br/baratino/" target="_blank"></a></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="header1 cid-qZLJxISaD7" id="header1-6">
+
+        <div class="mbr-overlay" style="opacity: 0.4; background-color: rgb(0, 0, 0);">
+        </div>
+        <div class="container">
+            <div class="row justify-content-md-center">
+                <div class="mbr-white col-md-10">
+
+                    <h3 class="mbr-section-subtitle align-center mbr-light pb-3 mbr-fonts-style display-2">FILIAL ATÉ EM GUARAJUBA!</h3>
+                    <p class="mbr-text align-center pb-3 mbr-fonts-style display-5"></p>
+                    <div class="mbr-section-btn align-center"><a class="btn btn-md btn-success display-4" href="index.html#footer2-b">Ver Mais</a></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="mbr-section content8 cid-qZLLQdvBVU" id="content8-7">
+
+        <div class="container">
+            <div class="media-container-row title">
+                <div class="col-12 col-md-8">
+                    <div class="mbr-section-btn align-center"><a class="btn btn-white-outline display-4"></a></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="mbr-section content4 cid-qZLMnN5m5T" id="content4-9">
+
+        <div class="container">
+            <div class="media-container-row">
+                <div class="title col-12 col-md-8">
+                    <h2 class="align-center pb-3 mbr-fonts-style display-2">
+                        Veículos em alta no mercado!
+                    </h2>
+
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="cid-qZLMGM8f1V" id="pricing-tables2-a">
+
+
+        <div class="container">
+            <div class="media-container-row">
+                <div class="plan col-12 mx-2 my-2 justify-content-center col-lg-3">
+                    <div class="plan-header text-center pt-5">
+                        <h3 class="plan-title mbr-fonts-style display-5"><strong>HYUNDAI ELANTRA</strong></h3>
+                        <div class="plan-price">
+                            <span class="price-value mbr-fonts-style display-5">
+                                R$
+                            </span>
+                            <span class="price-figure mbr-fonts-style display-1">66k</span>
+                            <small class="price-term mbr-fonts-style display-7"></small>
+                        </div>
+                    </div>
+                    <div class="plan-body">
+                        <div class="plan-list align-center">
+                            <ul class="list-group list-group-flush mbr-fonts-style display-7">
+                                <li class="list-group-item">Algumas ofertas excitantes que oferecemos aos nossos clientes assíduos</li>
+                                <li class="list-group-item">Parcelamos até 12x</li>
+                            </ul>
+                        </div>
+                        <div class="mbr-section-btn text-center py-4 pb-5"><a href="elantra.html" class="btn btn-success display-4">Ver Mais</a></div>
+                    </div>
+                </div>
+                <div class="plan col-12 mx-2 my-2 justify-content-center col-lg-3">
+                    <div class="plan-header text-center pt-5">
+                        <h3 class="plan-title mbr-fonts-style display-5"><strong>MARUTI SUZUKI SWIFT</strong></h3>
+                        <div class="plan-price">
+                            <span class="price-value mbr-fonts-style display-5">
+                                R$
+                            </span>
+                            <span class="price-figure mbr-fonts-style display-1">199k</span>
+                            <small class="price-term mbr-fonts-style display-7"></small>
+                        </div>
+                    </div>
+                    <div class="plan-body">
+                        <div class="plan-list align-center">
+                            <ul class="list-group list-group-flush mbr-fonts-style display-7">
+                                <li class="list-group-item">Algumas ofertas excitantes que oferecemos aos nossos clientes assíduos</li>
+                                <li class="list-group-item">Parcelamos até 12x</li>
+                                <li class="list-group-item">Com diversos opcionais</li>
+                            </ul>
+                        </div>
+                        <div class="mbr-section-btn text-center py-4 pb-5"><a href="swift.html" class="btn btn-success display-4">Ver Mais</a></div>
+                    </div>
+                </div>
+                <div class="plan col-12 mx-2 my-2 justify-content-center favorite col-lg-3">
+                    <div class="plan-header text-center pt-5">
+                        <h3 class="plan-title mbr-fonts-style display-5"><strong>MARUTI SUZUKI BREZZA</strong></h3>
+                        <div class="plan-price">
+                            <span class="price-value mbr-fonts-style display-5">
+                                R$
+                            </span>
+                            <span class="price-figure mbr-fonts-style display-1">225k</span>
+                            <small class="price-term mbr-fonts-style display-7"></small>
+                        </div>
+                    </div>
+                    <div class="plan-body">
+                        <div class="plan-list align-center">
+                            <ul class="list-group list-group-flush mbr-fonts-style display-7">
+                                <li class="list-group-item">Algumas ofertas excitantes que oferecemos aos nossos clientes assíduos</li>
+                                <li class="list-group-item">Parcelamos até 12x</li>
+                                <li class="list-group-item">Com diversos opcionais</li>
+                                <li class="list-group-item">Seguro garantido</li>
+                            </ul>
+                        </div>
+                        <div class="mbr-section-btn text-center py-4 pb-5"><a href="brezza.html" class="btn btn-success display-4">Ver Mais</a></div>
+                    </div>
+                </div>
+                <div class="plan col-12 mx-2 my-2 justify-content-center col-lg-3">
+                    <div class="plan-header text-center pt-5">
+                        <h3 class="plan-title mbr-fonts-style display-5"><strong>HONDA CIVIC</strong></h3>
+                        <div class="plan-price">
+                            <span class="price-value mbr-fonts-style display-5">
+                                R$
+                            </span>
+                            <span class="price-figure mbr-fonts-style display-1">90k</span>
+                            <small class="price-term mbr-fonts-style display-7"></small>
+                        </div>
+                    </div>
+                    <div class="plan-body">
+                        <div class="plan-list align-center">
+                            <ul class="list-group list-group-flush mbr-fonts-style display-7">
+                                <li class="list-group-item">Algumas ofertas excitantes que oferecemos aos nossos clientes assíduos</li>
+                                <li class="list-group-item">Parcelamos até 12x</li>
+                                <li class="list-group-item">Com diversos opcionais</li>
+                                <li class="list-group-item">Seguro garantido</li>
+                                <li class="list-group-item">Honda</li>
+                            </ul>
+                        </div>
+                        <div class="mbr-section-btn text-center py-4 pb-5"><a href="civic.html" class="btn btn-success display-4">Ver Mais</a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="mbr-section content8 cid-qZLMUFJdHC" id="content8-c">
+
+        <div class="container">
+            <div class="media-container-row title">
+                <div class="col-12 col-md-8">
+                    <div class="mbr-section-btn align-center"><a class="btn btn-white-outline display-4"></a></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="@Url.Content("~/assets/web/assets/jquery/jquery.min.js")"></script>
+    <script src="@Url.Content("~/assets/popper/popper.min.js")"></script>
+    <script src="@Url.Content("~/assets/tether/tether.min.js")"></script>
+    <script src="@Url.Content("~/assets/bootstrap/js/bootstrap.min.js")"></script>
+    <script src="@Url.Content("~/assets/smoothscroll/smooth-scroll.js")"></script>
+    <script src="@Url.Content("~/assets/dropdown/js/script.min.js")"></script>
+    <script src="@Url.Content("~/assets/touchswipe/jquery.touch-swipe.min.js")"></script>
+    <script src="@Url.Content("~/assets/viewportchecker/jquery.viewportchecker.js")"></script>
+    <script src="@Url.Content("~/assets/theme/js/script.js")"></script>
+
+
+    <div id="scrollToTop" class="scrollToTop mbr-arrow-up"><a style="text-align: center;"><i></i></a></div>
+    <input name="animation" type="hidden">
+</body>
+</html>

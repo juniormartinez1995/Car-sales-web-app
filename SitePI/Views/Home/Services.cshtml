@@ -1,0 +1,337 @@
+﻿
+@{
+    ViewData["Title"] = "Services";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@{
+    ViewData["Title"] = "Services";
+}
+@using Microsoft.AspNetCore.Identity
+@using SitePI.Models
+
+@inject SignInManager<ApplicationUser> SignInManager
+@inject UserManager<ApplicationUser> UserManager
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="generator" content="Mobirise v4.7.6, mobirise.com">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+    <link rel="shortcut icon" src="@Url.Content("assets/images/marcha-128x128.png")" type="image/x-icon">
+    <meta name="description" content="">
+
+    <title>Serviços</title>
+
+    <link href="@Url.Content("~/assets/web/assets/mobirise-icons/mobirise-icons.css")" rel="stylesheet" type="text/css" />
+    <link href="@Url.Content("~/assets/tether/tether.min.css")" rel="stylesheet" type="text/css" />
+    <link href="@Url.Content("~/assets/soundcloud-plugin/style.css")" rel="stylesheet" type="text/css" />
+    <link href="@Url.Content("~/assets/bootstrap/css/bootstrap.min.css")" rel="stylesheet" type="text/css" />
+    <link href="@Url.Content("~/assets/bootstrap/css/bootstrap-grid.min.css")" rel="stylesheet" type="text/css" />
+    <link href="@Url.Content("~/assets/bootstrap/css/bootstrap-reboot.min.css")" rel="stylesheet" type="text/css" />
+    <link href="@Url.Content("~/assets/dropdown/css/style.css")" rel="stylesheet" type="text/css" />
+    <link href="@Url.Content("~/assets/socicon/css/styles.css")" rel="stylesheet" type="text/css" />
+    <link href="@Url.Content("~/assets/animatecss/animate.min.css")" rel="stylesheet" type="text/css" />
+    <link href="@Url.Content("~/assets/theme/css/style.css")" rel="stylesheet" type="text/css" />
+    <link href="@Url.Content("~/assets/mobirise/css/mbr-additional.css")" rel="stylesheet" type="text/css" />
+
+
+
+</head>
+<body>
+
+    <section class="mbr-section content8 cid-r0dYndeLQg" id="content8-12">
+
+        <div class="container">
+            <div class="media-container-row title">
+                <div class="col-12 col-md-8">
+                    <div class="mbr-section-btn align-center"><a class="btn btn-white-outline display-4"></a></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="features3 cid-r0dYgpvwid" id="features3-11">
+
+
+        <div class="container">
+            <div class="media-container-row">
+                <div class="card p-3 col-12 col-md-6 col-lg-4">
+                    <div class="card-wrapper">
+                        <div class="card-img">
+                            <img src="@Url.Content("~/assets/images/mbr-3-676x451.jpg")" alt="Mobirise" title="">
+                        </div>
+                        <div class="card-box">
+                            <h4 class="card-title mbr-fonts-style display-7">NOME CARRO</h4>
+                            <p class="mbr-text mbr-fonts-style display-7">
+                                TEXTO AQUI
+                            </p>
+                        </div>
+                        <div class="mbr-section-btn text-center"><a href="services.html" class="btn btn-success display-4">Ver Mais</a></div>
+                    </div>
+                </div>
+                <div class="card p-3 col-12 col-md-6 col-lg-4">
+                    <div class="card-wrapper">
+                        <div class="card-img">
+                            <img src="@Url.Content("~/assets/images/mbr-2-676x451.jpg")" alt="Mobirise" title="">
+                        </div>
+                        <div class="card-box">
+                            <h4 class="card-title mbr-fonts-style display-7">NOME CARRO</h4>
+                            <p class="mbr-text mbr-fonts-style display-7">
+                                TEXTO AQUI
+                            </p>
+                        </div>
+                        <div class="mbr-section-btn text-center">
+                            <a href="services.html" class="btn btn-success display-4">
+                                Ver Mais
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card p-3 col-12 col-md-6 col-lg-4">
+                    <div class="card-wrapper">
+                        <div class="card-img">
+                            <img src="@Url.Content("~/assets/images/mbr-676x450.jpg")" alt="Mobirise" title="">
+                        </div>
+                        <div class="card-box">
+                            <h4 class="card-title mbr-fonts-style display-7">NOME CARRO</h4>
+                            <p class="mbr-text mbr-fonts-style display-7">
+                                TEXTO AQUI
+                            </p>
+                        </div>
+                        <div class="mbr-section-btn text-center">
+                            <a href="services.html" class="btn btn-success display-4">
+                                Ver Mais
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <section class="mbr-section content8 cid-r0e0bvsdcx" id="content8-13">
+
+        <div class="container">
+            <div class="media-container-row title">
+                <div class="col-12 col-md-8">
+                    <div class="mbr-section-btn align-center"><a class="btn btn-white-outline display-4"></a></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="features3 cid-r0e0dS3aVj" id="features3-14">
+
+
+        <div class="container">
+            <div class="media-container-row">
+                <div class="card p-3 col-12 col-md-6 col-lg-4">
+                    <div class="card-wrapper">
+                        <div class="card-img">
+                            <img src="@Url.Content("~/assets/images/mbr-3-676x451.jpg")" alt="Mobirise" title="">
+                        </div>
+                        <div class="card-box">
+                            <h4 class="card-title mbr-fonts-style display-7">NOME CARRO</h4>
+                            <p class="mbr-text mbr-fonts-style display-7">
+                                TEXTO AQUI
+                            </p>
+                        </div>
+                        <div class="mbr-section-btn text-center"><a href="services.html" class="btn btn-success display-4">Ver Mais</a></div>
+                    </div>
+                </div>
+                <div class="card p-3 col-12 col-md-6 col-lg-4">
+                    <div class="card-wrapper">
+                        <div class="card-img">
+                            <img src="@Url.Content("~/assets/images/mbr-2-676x451.jpg")" alt="Mobirise" title="">
+                        </div>
+                        <div class="card-box">
+                            <h4 class="card-title mbr-fonts-style display-7">NOME CARRO</h4>
+                            <p class="mbr-text mbr-fonts-style display-7">
+                                TEXTO AQUI
+                            </p>
+                        </div>
+                        <div class="mbr-section-btn text-center">
+                            <a href="services.html" class="btn btn-success display-4">
+                                Ver Mais
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card p-3 col-12 col-md-6 col-lg-4">
+                    <div class="card-wrapper">
+                        <div class="card-img">
+                            <img src="@Url.Content("~/assets/images/mbr-676x450.jpg")" alt="Mobirise" title="">
+                        </div>
+                        <div class="card-box">
+                            <h4 class="card-title mbr-fonts-style display-7">NOME CARRO</h4>
+                            <p class="mbr-text mbr-fonts-style display-7">
+                                TEXTO AQUI
+                            </p>
+                        </div>
+                        <div class="mbr-section-btn text-center">
+                            <a href="services.html" class="btn btn-success display-4">
+                                Ver Mais
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <section class="mbr-section content8 cid-r0e0fJmQON" id="content8-15">
+
+        <div class="container">
+            <div class="media-container-row title">
+                <div class="col-12 col-md-8">
+                    <div class="mbr-section-btn align-center"><a class="btn btn-white-outline display-4"></a></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="features3 cid-r0e0iacSAg" id="features3-16">
+
+
+        <div class="container">
+            <div class="media-container-row">
+                <div class="card p-3 col-12 col-md-6 col-lg-4">
+                    <div class="card-wrapper">
+                        <div class="card-img">
+                            <img src="@Url.Content("~/assets/images/mbr-3-676x451.jpg")" alt="Mobirise" title="">
+                        </div>
+                        <div class="card-box">
+                            <h4 class="card-title mbr-fonts-style display-7">NOME CARRO</h4>
+                            <p class="mbr-text mbr-fonts-style display-7">
+                                TEXTO AQUI
+                            </p>
+                        </div>
+                        <div class="mbr-section-btn text-center"><a href="services.html" class="btn btn-success display-4">Ver Mais</a></div>
+                    </div>
+                </div>
+                <div class="card p-3 col-12 col-md-6 col-lg-4">
+                    <div class="card-wrapper">
+                        <div class="card-img">
+                            <img src="@Url.Content("~/assets/images/mbr-2-676x451.jpg")" alt="Mobirise" title="">
+                        </div>
+                        <div class="card-box">
+                            <h4 class="card-title mbr-fonts-style display-7">NOME CARRO</h4>
+                            <p class="mbr-text mbr-fonts-style display-7">
+                                TEXTO AQUI
+                            </p>
+                        </div>
+                        <div class="mbr-section-btn text-center">
+                            <a href="services.html" class="btn btn-success display-4">
+                                Ver Mais
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card p-3 col-12 col-md-6 col-lg-4">
+                    <div class="card-wrapper">
+                        <div class="card-img">
+                            <img src="@Url.Content("~/assets/images/mbr-676x450.jpg")" alt="Mobirise" title="">
+                        </div>
+                        <div class="card-box">
+                            <h4 class="card-title mbr-fonts-style display-7">NOME CARRO</h4>
+                            <p class="mbr-text mbr-fonts-style display-7">
+                                TEXTO AQUI
+                            </p>
+                        </div>
+                        <div class="mbr-section-btn text-center">
+                            <a href="services.html" class="btn btn-success display-4">
+                                Ver Mais
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <section class="mbr-section content8 cid-r0e0kVAXgd" id="content8-17">
+
+        <div class="container">
+            <div class="media-container-row title">
+                <div class="col-12 col-md-8">
+                    <div class="mbr-section-btn align-center"><a class="btn btn-white-outline display-4"></a></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="features3 cid-r0e0nf32DC" id="features3-18">
+
+
+        <div class="container">
+            <div class="media-container-row">
+                <div class="card p-3 col-12 col-md-6 col-lg-4">
+                    <div class="card-wrapper">
+                        <div class="card-img">
+                            <img src="@Url.Content("~/assets/images/mbr-3-676x451.jpg")" alt="Mobirise" title="">
+                        </div>
+                        <div class="card-box">
+                            <h4 class="card-title mbr-fonts-style display-7">NOME CARRO</h4>
+                            <p class="mbr-text mbr-fonts-style display-7">
+                                TEXTO AQUI
+                            </p>
+                        </div>
+                        <div class="mbr-section-btn text-center"><a href="services.html" class="btn btn-success display-4">Ver Mais</a></div>
+                    </div>
+                </div>
+                <div class="card p-3 col-12 col-md-6 col-lg-4">
+                    <div class="card-wrapper">
+                        <div class="card-img">
+                            <img src="@Url.Content("~/assets/images/mbr-2-676x451.jpg")" alt="Mobirise" title="">
+                        </div>
+                        <div class="card-box">
+                            <h4 class="card-title mbr-fonts-style display-7">NOME CARRO</h4>
+                            <p class="mbr-text mbr-fonts-style display-7">
+                                TEXTO AQUI
+                            </p>
+                        </div>
+                        <div class="mbr-section-btn text-center">
+                            <a href="services.html" class="btn btn-success display-4">
+                                Ver Mais
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card p-3 col-12 col-md-6 col-lg-4">
+                    <div class="card-wrapper">
+                        <div class="card-img">
+                            <img src="@Url.Content("~/assets/images/mbr-676x450.jpg")" alt="Mobirise" title="">
+                        </div>
+                        <div class="card-box">
+                            <h4 class="card-title mbr-fonts-style display-7">NOME CARRO</h4>
+                            <p class="mbr-text mbr-fonts-style display-7">
+                                TEXTO AQUI
+                            </p>
+                        </div>
+                        <div class="mbr-section-btn text-center">
+                            <a href="services.html" class="btn btn-success display-4">
+                                Ver Mais
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <section class="mbr-section content8 cid-r0e0rgDWnX" id="content8-1a">
+
+        <div class="container">
+            <div class="media-container-row title">
+                <div class="col-12 col-md-8">
+                    <div class="mbr-section-btn align-center"><a class="btn btn-white-outline display-4"></a></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div id="scrollToTop" class="scrollToTop mbr-arrow-up"><a style="text-align: center;"><i></i></a></div>
+    <input name="animation" type="hidden">
+</body>
+</html>
+

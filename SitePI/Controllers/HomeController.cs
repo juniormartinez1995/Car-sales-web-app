@@ -29,6 +29,14 @@ namespace SitePI.Controllers
             return View();
         }
 
+        public IActionResult Services()
+        {
+            ViewData["Message"] = "Your services page.";
+
+            return View();
+
+        }
+
         public IActionResult Error()
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
