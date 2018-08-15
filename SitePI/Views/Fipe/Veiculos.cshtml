@@ -1,13 +1,12 @@
-﻿@model IEnumerable<SitePI.Models.FipeAPI.Marcas>
+﻿@model IEnumerable<SitePI.Models.FipeAPI.Veiculos>
 
 @{
-    ViewData["Title"] = "Marcas";
+    ViewData["Title"] = "Veiculos";
     Layout = "~/Views/Shared/_Layout.cshtml";
+    var data = ViewData["IdMarca"];
 }
 
-<h2>
-
-    Marcas</h2>
+<h2>Veiculos</h2>
 
 <p>
     <a asp-action="Create">Create New</a>
@@ -15,6 +14,15 @@
 <table class="table">
     <thead>
         <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.fipe_marca)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.name)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.marca)
+                </th>
                 <th>
                     @Html.DisplayNameFor(model => model.key)
                 </th>
@@ -24,15 +32,21 @@
                 <th>
                     @Html.DisplayNameFor(model => model.fipe_name)
                 </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.name)
-                </th>
             <th></th>
         </tr>
     </thead>
     <tbody>
 @foreach (var item in Model) {
         <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.fipe_marca)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.marca)
+            </td>
             <td>
                 @Html.DisplayFor(modelItem => item.key)
             </td>
@@ -43,10 +57,7 @@
                 @Html.DisplayFor(modelItem => item.fipe_name)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.name)
-            </td>
-            <td>
-                @Html.ActionLink("Selecionar veiculo", "Veiculos", new { id = item.id })
+                @Html.ActionLink("Selecionar ano", "AnoModelo", new { IdMarca = data, id = item.id })
             </td>
         </tr>
 }

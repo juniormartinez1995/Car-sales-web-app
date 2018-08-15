@@ -1,0 +1,73 @@
+﻿@model IEnumerable<SitePI.Models.FipeAPI.AnoModelo>
+
+@{
+    ViewData["Title"] = "AnoModelo";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    var IdMarcaData = ViewData["IdMarca"];
+    var IdAnoData = ViewData["IdAno"];
+}
+
+<h2>AnoModelo</h2>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.fipe_marca)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.fipe_codigo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.marca)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.key)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.veiculo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.id)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.fipe_marca)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.fipe_codigo)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.marca)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.key)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.veiculo)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.id)
+                </td>
+                <td>
+                    @Html.ActionLink("Obter preço", "PrecoCorrente", new { IdMarca = IdMarcaData, IdAno = IdAnoData, id = item.id })
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
