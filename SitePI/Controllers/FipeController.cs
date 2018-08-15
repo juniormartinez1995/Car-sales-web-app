@@ -11,6 +11,10 @@ namespace SitePI.Controllers
     {
         public IActionResult Marcas()
         {
+            if (!User.Identity.IsAuthenticated)
+            {
+                return RedirectToAction("Login", "Account");
+            }
 
             var m = new Marcas();
             var ListaMrc = m.GetJsonData<Marcas>("http://fipeapi.appspot.com/api/1/carros/marcas.json");
