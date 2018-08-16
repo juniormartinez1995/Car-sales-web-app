@@ -8,14 +8,14 @@
 {
     <form asp-area="" asp-controller="Account" asp-action="Logout" method="post" id="logoutForm" class="navbar-right">
         <li class="nav-item">
-            <a class="nav-link link text-white display-4" onclick="location.href='@Url.Action("Index", "Manage")'">
+            <a class="nav-link link text-white display-4"  onclick="location.href='@Url.Action("Index", "Manage")'">
                 Ola @UserManager.GetUserName(User);
             </a>
         </li>
 
 
         <li>
-            <button type="submit" class="btn btn-link navbar-btn navbar-link">Log out</button>
+            <button type="submit"  class="mbri-logout btn-link navbar-btn navbar-link">Log out</button>
         </li>
 
     </form>
@@ -24,14 +24,14 @@ else
 {
     <li class="nav-item">
         <a class="nav-link link text-white display-4" onclick="location.href='@Url.Action("Register", "Account")'">
-            <span class="mbri-sites mbr-iconfont mbr-iconfont-btn"></span>
+            <span class="mbri-github mbr-iconfont mbr-iconfont-btn"></span>
             Register&nbsp;
         </a>
     </li>
 
     <li class="nav-item">
         <a class="nav-link link text-white display-4" onclick="location.href='@Url.Action("Login", "Account")'">
-            <span class="mbri-sites mbr-iconfont mbr-iconfont-btn"></span>
+            <span class="mbri-login mbr-iconfont mbr-iconfont-btn"></span>
             Log in&nbsp;
         </a>
     </li>
