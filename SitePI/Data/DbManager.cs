@@ -1,9 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 using MySql.Data;
 using MySql.Data.MySqlClient;
+using SitePI.Models.CarServicesViewModels;
 
 namespace SitePI.Data
 {
@@ -13,7 +15,7 @@ namespace SitePI.Data
         public static MySqlConnection GetConn()
         {
             //Connection string precisa ser mudada
-            MySqlConnection conn = new MySqlConnection("Server=highlander;Database=dbLPIII;Uid=estudante;Pwd=123456;");
+            MySqlConnection conn = new MySqlConnection("Server=localhost;Database=testdb;Uid=root;Pwd=1234;SslMode=none;");
             return conn;
         }
 
@@ -45,17 +47,31 @@ namespace SitePI.Data
             }
         }
 
-        public static void ReadItem(String Elemento, String Ordem, String table, MySqlConnection Connection)
+        public static List<DbModel> ReadItem(MySqlConnection Connection)
         {
-            String Query = "SELECT " + Elemento + " FROM" +table +" ORDER BY " + Ordem + "";
+            String Query = "SELECT * FROM user";
+
+            List<DbModel> List = new List<DbModel>();
+
+            Connection.Open();
 
             MySqlCommand cmd = new MySqlCommand(Query, Connection);
             var dr = cmd.ExecuteReader();
 
             while (dr.Read())
             {
-                Console.WriteLine(dr[Elemento].ToString());
+                List.Add(new DbModel
+                {
+                    id = dr.GetInt32("id"),
+                    Nome = dr["Nome"].ToString(),
+                    Sobrenome = dr["Sobrenome"].ToString(),
+                    Local = dr["Local"].ToString(),
+                    HorarioCadastro = dr.GetDateTime("HorarioCadastro")
+                });
+                Debug.WriteLine(dr["Nome"].ToString());
             }
+
+            return List;
         }
     }
 }

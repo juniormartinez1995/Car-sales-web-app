@@ -4,7 +4,9 @@ using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using SitePI.Data;
 using SitePI.Models;
+using SitePI.Models.CarServicesViewModels;
 
 namespace SitePI.Controllers
 {
@@ -13,6 +15,13 @@ namespace SitePI.Controllers
         public IActionResult Index()
         {
             return View();
+        }
+
+        public IActionResult TestDB()
+        {
+            List<DbModel> ListCar = new List<DbModel>();
+            ListCar = DbManager.ReadItem(DbManager.GetConn());
+            return View(ListCar);
         }
 
         public IActionResult About()
